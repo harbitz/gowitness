@@ -19,10 +19,11 @@ RUN export DEBIAN_FRONTEND=noninteractive \
   && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/
 
 COPY --from=build /src/gowitness /usr/local/bin
+COPY run.sh /usr/local/bin
 
 EXPOSE 7171
 
 VOLUME ["/data"]
 WORKDIR /data
 
-ENTRYPOINT ["dumb-init", "--"]
+ENTRYPOINT ["dumb-init", "--", "run.sh"]
