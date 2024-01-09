@@ -1,0 +1,1 @@
+- Fjerne "screenshots" mappe om tom
