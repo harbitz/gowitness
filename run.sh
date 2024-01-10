@@ -21,10 +21,10 @@ do
         
         if [ ! -z "$check_diff" ]
         then
-            [ ! -d "$root_folder/screenshot-diff" ] && mkdir $root_folder/screenshot-diff
+            [ ! -d "$root_folder/screenshots-diff" ] && mkdir $root_folder/screenshots-diff
             forwarded_filename=$(echo $screenshot_original |sed "s#.png#-forwarded.png#")
-            cp $screenshot_original_dir/$screenshot_original $root_folder/screenshot-diff
-            cp $screenshot_forwarded_dir/$screenshot_original $root_folder/screenshot-diff/$forwarded_filename
+            cp $screenshot_original_dir/$screenshot_original $root_folder/screenshots-diff
+            cp $screenshot_forwarded_dir/$screenshot_original $root_folder/screenshots-diff/$forwarded_filename
         fi
     fi
 done
