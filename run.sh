@@ -16,7 +16,7 @@ do
     check_if_exist=$(ls $screenshot_forwarded_dir |grep $screenshot_original)
     if [ $check_if_exist ]
     then
-        echo "[+]Comparing: $screenshot_original"
+        echo "[+] Comparing: $screenshot_original"
         check_diff=$(perceptualdiff --threshold 30000 $screenshot_original_dir/$screenshot_original $screenshot_forwarded_dir/$screenshot_original)
         
         if [ ! -z "$check_diff" ]
