@@ -14,7 +14,7 @@ FROM chromedp/headless-shell:latest
 RUN export DEBIAN_FRONTEND=noninteractive \
   && apt-get update \
   && apt-get install -y --no-install-recommends \
-  dumb-init fonts-noto fonts-noto-cjk \
+  dumb-init fonts-noto fonts-noto-cjk perceptualdiff \
   && apt-get clean \
   && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/
 
